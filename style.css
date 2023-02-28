@@ -1,0 +1,105 @@
+:root{
+    --mainclr: slategray;
+    --secclr: red;
+}
+
+*{
+    margin: 0;
+    padding: 0;   
+    outline: none;
+    box-sizing: border-box;
+     transition: .2s;
+     text-transform: capitalize;
+    text-decoration: none;
+}
+
+html{
+    font-size: 62.5%;
+    overflow: hidden;
+}
+
+.header{
+    padding: 1.5rem 7%;
+    background-color: var(--mainclr);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+
+.header #logo{
+    width: 65px;
+}
+
+.navbar a{
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    position: relative;
+    border-bottom: 1px solid red;
+    border-left: 1px solid red;
+}
+
+.navbar a:after{
+    content: '';
+    background: var(--secclr);
+    width: 0;
+    transition: .3s;
+    height: 3px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.navbar a:hover{
+    content: '';
+    background: var(--secclr);
+    width: 0;
+    transition: .3s;
+    height: 3px;
+    position: relative;
+    top: 100%;
+    left: 0;
+    text-decoration: underline;
+}
+
+div .icons{
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: white;
+    display: none;
+}
+
+.icons a{
+    color: white;
+    background: red;
+    padding: 1.5rem 3rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    transition: .2s;
+}
+
+.icons a:hover{
+    background: transparent;
+    border: 1px solid red;
+}
+
+
+
+
+
+@media (max-width:760px) {
+    html{
+        font-size: 55%;
+    }
+    
+    .header{
+        padding: 2rem;
+    }
+
+    div .icons{
+        display: initial;
+    }
+}
